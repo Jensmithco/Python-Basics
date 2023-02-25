@@ -19,9 +19,6 @@ class ParkingGarage():
         #print(self.parkingSpaces)
 
 
-    #Display an input that waits for an amount from the user and store it in a variable
-    #If the payment variables not empty then -> display a message to the user that their ticket has been paid and they have 15mins to leave
-    #This should update the "currentTicket" dictionary key "paid" to True
     def payForParking(self):  
         """takes payment for ticket, prints message to user on amount of time left and
         updates currentTicket dictionary ket "paid" to True"""
@@ -40,11 +37,7 @@ class ParkingGarage():
                 amount = input("Please enter your payment amount ")
                 self.currentTicket['paid'] = False
         
-    # If the ticket has been paid, display a message of "Thank You, have a nice day"
-    #If the ticket has not been paid, display an input prompt for payment
-    #Once paid, display message "Thank you, have a nice day!"
-    #Update parkingSpaces list to increase by 1
-    #Update tickets list to increase by 1
+    
     def leaveGarage(self):
         if self.currentTicket['paid'] == True:
             print ("Thank you, have a nice day")
